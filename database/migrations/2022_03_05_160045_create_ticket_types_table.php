@@ -28,7 +28,7 @@ return new class extends Migration
             $table->boolean('show_remaining_entries');
             $table->boolean('active');
             $table->timestamp('sales_start_date');
-            $table->timestamp('sales_end_date');
+            $table->timestamp('sales_end_date')->nullable();
             $table->foreignId('event_id')->constrained('events')->cascadeOnDelete();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
 
